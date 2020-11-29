@@ -1,0 +1,22 @@
+//Color
+$primary-clr: #9356DC;
+$secondary-clr:#FF79DA;
+$tertiary-clr:#99E2D0;
+$fourtiary-clr: #F6F2F2;
+
+//Font-size
+$font-shrikhand: 'Shrikhand', cursive;
+$font-roboto: 'Roboto', sans-serif;
+
+//Breakpoint
+@mixin breakpoint ($device){
+    @if $device == mobile {
+        @media screen and (min-width: 375px) and (max-width: 1023px){@content;}
+    }   
+    @else if $device == iPad {
+        @media screen and (min-width:1023px) and (max-width:1248px) { @content;}
+    }
+    @else if $device == desktop{
+        @media screen and (min-width:1249px) { @content;}
+    }
+}

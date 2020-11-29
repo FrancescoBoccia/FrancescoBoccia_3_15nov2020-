@@ -1,0 +1,416 @@
+@include breakpoint (mobile){
+
+html{
+    padding: 0;
+    margin: 0;
+    body{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 2227px;
+    top: 0;
+    left: 0;
+    background-color: #F6F2F2;
+    z-index: 15;
+    opacity: 1;
+    visibility: hidden;
+    animation: load 3s ease-in-out;
+    &__circle{
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left:9%;
+        top: 7%;
+        margin: 75px 0 0 75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color:$primary-clr;
+        animation: spin 2s linear infinite;
+        }
+    &__circle::before{
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color:$secondary-clr;
+        animation: spin 3s;
+    }
+    &__circle::after{
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color:$tertiary-clr;
+        animation: spin 3s ease-in-out;
+    }
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes load{
+    from{
+        opacity: 1;
+        visibility: visible;
+        }
+    to{
+        visibility: hidden;
+    }
+}
+
+header{
+    height: 401px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    .explore{
+        width: 100%;
+    }
+    .logo{
+        width: 139px;
+        height: 2.25rem;
+        padding-top: 1.2rem;
+        object-fit: contain;
+    }
+    .location{
+        font-family: $font-roboto;
+        font-weight: 500;
+        width: 100%;
+        height: 51px;
+        background-color: #EFECEC;
+        line-height: 50px;
+        box-shadow:0px 10px 10px black;
+        >span{
+            margin-right: 20px;
+        }
+    }
+    .book{
+        height: 286px;
+        background-color: $fourtiary-clr;
+        &__title{
+            font-family: $font-roboto;
+            font-weight: 600;
+            font-size: 25px;
+            padding: 40px;
+        }
+        &__discover{
+            font-family: $font-roboto;
+            font-size: 17px;
+            margin-bottom: 19px;
+            color: #7D7D7D;
+        }
+    }
+}
+.choose_restaurant{
+    text-decoration: none;
+}
+.book__button{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 19px 27px;
+    color: white;
+    border-radius: 50px;
+    background-color: $primary-clr;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient($secondary-clr, $primary-clr);
+    box-shadow:  0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+.book__button:hover{
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+}
+
+@include breakpoint (iPad){
+    html, body{
+        padding: 0;
+        margin: 0;
+    }
+
+    .loader{
+        position: absolute;
+        width: 100%;
+        height: 2227px;
+        top: 0;
+        background-color: #F6F2F2;
+        z-index: 15;
+        opacity: 1;
+        visibility: hidden;
+        animation: load 3s ease-in-out;
+        &__circle{
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left:36%;
+            top: 10%;
+            margin: 75px 0 0 75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color:$primary-clr;
+            animation: spin 2s linear infinite;
+            }
+        &__circle::before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color:$secondary-clr;
+            animation: spin 3s;
+        }
+        &__circle::after{
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color:$tertiary-clr;
+            animation: spin 3s ease-in-out;
+        }
+    }
+    @keyframes spin{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes load{
+        from{
+            opacity: 1;
+            visibility: visible;
+            }
+        to{
+            visibility: hidden;
+        }
+    }
+
+    header{
+        height: 401px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        .explore{
+            width: 100%;
+        }
+        .logo{
+            width: 359px;
+            height: 3.25rem;
+            padding-top: 2.2rem;
+            padding-bottom: 20px;
+            object-fit: contain;
+        }
+        .location{
+            font-family: $font-roboto;
+            font-size: 28px;
+            font-weight: 500;
+            width: 100%;
+            height: 71px;
+            background-color: #EFECEC;
+            line-height: 70px;
+            >span{
+                margin-right: 20px;
+            }
+        }
+        .book{
+            height: 286px;
+            background-color: $fourtiary-clr;
+            &__title{
+                font-family: $font-roboto;
+                font-weight: 600;
+                font-size: 28px;
+                padding: 40px;
+            }
+            &__discover{
+                font-family: $font-roboto;
+                font-size: 21px;
+                margin-bottom: 19px;
+                color: #7D7D7D;
+            }
+        }
+    }
+    .book__button{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 19px 27px;
+        color: white;
+        border-radius: 50px;
+        background-color: $primary-clr;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        background: linear-gradient($secondary-clr, $primary-clr);
+        box-shadow:  0 6px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+    .book__button:hover{
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    }
+}
+
+@include breakpoint (desktop){
+    html, body{
+        padding: 0;
+        margin: 0;
+    }
+
+    .loader{
+        position: absolute;
+        width: 100%;
+        height: 2227px;
+        top: 0;
+        background-color: #F6F2F2;
+        z-index: 15;
+        opacity: 1;
+        visibility: hidden;
+        animation: load 3s ease-in-out;
+        &__circle{
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left:39%;
+            top: 8%;
+            margin: 75px 0 0 75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color:$primary-clr;
+            animation: spin 2s linear infinite;
+            }
+        &__circle::before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color:$secondary-clr;
+            animation: spin 3s;
+        }
+        &__circle::after{
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color:$tertiary-clr;
+            animation: spin 3s ease-in-out;
+        }
+    }
+    @keyframes spin{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes load{
+        from{
+            opacity: 1;
+            visibility: visible;
+            }
+        to{
+            visibility: hidden;
+        }
+    }
+
+    header{
+        display: flex;
+        height: 401px;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        .explore{
+            width: 100%;
+        }
+        .logo{
+            width: 359px;
+            height: 3.25rem;
+            padding-top: 2.2rem;
+            padding-bottom: 20px;
+            object-fit: contain;
+        }
+        .location{
+            font-family: $font-roboto;
+            font-size: 28px;
+            font-weight: 500;
+            width: 100%;
+            height: 71px;
+            background-color: #EFECEC;
+            line-height: 70px;
+            >span{
+                margin-right: 20px;
+            }
+        }
+        .book{
+            height: 286px;
+            background-color: $fourtiary-clr;
+            &__title{
+                font-family: $font-roboto;
+                font-weight: 600;
+                font-size: 28px;
+                padding: 40px;
+            }
+            &__discover{
+                font-family: $font-roboto;
+                font-size: 21px;
+                margin-bottom: 19px;
+                color: #7D7D7D;
+            }
+        }
+    }
+    .book__button{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 19px 27px;
+        color: white;
+        border-radius: 50px;
+        background-color: $primary-clr;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        background: linear-gradient($secondary-clr, $primary-clr);
+        box-shadow:  0 6px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+    .book__button:hover{
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    }
+}
